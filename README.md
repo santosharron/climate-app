@@ -2,7 +2,7 @@
 
 Learn how to make a Weather app in Flutter, I used the Open Weather Map API to make calls to a restful API to return the current weather data. The HTTP package uses await and async features and provides many high-level methods such as read, get, post, put, head, and delete methods for sending and receiving data from remote locations. These methods simplify the development of REST-based mobile applications.
 
-### Current App Version - 2.0.1 
+### Stable App Version - 2.0.1 
 
 ![Preview](https://i.imgur.com/OMnEkWn.png)
 
