@@ -9,6 +9,8 @@ class UnitSystemDialog extends ConsumerWidget {
     'Imperial': UnitSystem.imperial,
   };
 
+  const UnitSystemDialog({super.key});
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final unitSystemState = ref.watch(unitSystemStateNotifierProvider);
@@ -21,7 +23,7 @@ class UnitSystemDialog extends ConsumerWidget {
           title: Text(
             entry.key,
             style: TextStyle(
-              color: Theme.of(context).textTheme.subtitle1!.color,
+              color: Theme.of(context).textTheme.titleMedium!.color,
             ),
           ),
           value: entry.value,
@@ -37,7 +39,7 @@ class UnitSystemDialog extends ConsumerWidget {
       title: Text(
         'Unit system',
         style: TextStyle(
-          color: Theme.of(context).textTheme.subtitle1!.color,
+          color: Theme.of(context).textTheme.titleMedium!.color,
         ),
       ),
       children: [Column(mainAxisSize: MainAxisSize.min, children: radios)],

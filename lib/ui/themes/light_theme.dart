@@ -8,7 +8,6 @@ final lightTheme = ThemeData.light().copyWith(
   // explicitly.
   brightness: Brightness.light,
   iconTheme: const IconThemeData(color: Color(0xFF5F6267)),
-  toggleableActiveColor: const Color(0xFF1A73E9),
   colorScheme: ColorScheme.fromSwatch(accentColor: const Color(0xFF1A73E9)),
   primaryColor: const Color(0xFFFFFFFF),
   scaffoldBackgroundColor: const Color(0xFFFFFFFF),
@@ -18,11 +17,11 @@ final lightTheme = ThemeData.light().copyWith(
     contentTextStyle: TextStyle(color: Color(0xFFE9EAEE)),
   ),
   textTheme: const TextTheme(
-    subtitle1: TextStyle(color: Color(0xFF3C4043)),
-    subtitle2: TextStyle(color: Color(0xFF5F6267)),
-    bodyText2: TextStyle(color: Color(0xFF3C4043)),
-    caption: TextStyle(color: Color(0xFF5F6267)),
-    headline5: TextStyle(color: Color(0xFF3C4043)),
+    titleMedium: TextStyle(color: Color(0xFF3C4043)),
+    titleSmall: TextStyle(color: Color(0xFF5F6267)),
+    bodyMedium: TextStyle(color: Color(0xFF3C4043)),
+    bodySmall: TextStyle(color: Color(0xFF5F6267)),
+    headlineSmall: TextStyle(color: Color(0xFF3C4043)),
   ),
   primaryTextTheme: const TextTheme(
     titleSmall: TextStyle(color: Color(0xFF3C4043)),
@@ -48,7 +47,30 @@ final lightTheme = ThemeData.light().copyWith(
       systemNavigationBarColor: Color(0xFFFFFFFF),
       statusBarColor: Color(0xFFFFFFFF),
     ),
-  ),
+  ), checkboxTheme: CheckboxThemeData(
+ fillColor: MaterialStateProperty.resolveWith<Color?>((Set<MaterialState> states) {
+ if (states.contains(MaterialState.disabled)) { return null; }
+ if (states.contains(MaterialState.selected)) { return const Color(0xFF1A73E9); }
+ return null;
+ }),
+ ), radioTheme: RadioThemeData(
+ fillColor: MaterialStateProperty.resolveWith<Color?>((Set<MaterialState> states) {
+ if (states.contains(MaterialState.disabled)) { return null; }
+ if (states.contains(MaterialState.selected)) { return const Color(0xFF1A73E9); }
+ return null;
+ }),
+ ), switchTheme: SwitchThemeData(
+ thumbColor: MaterialStateProperty.resolveWith<Color?>((Set<MaterialState> states) {
+ if (states.contains(MaterialState.disabled)) { return null; }
+ if (states.contains(MaterialState.selected)) { return const Color(0xFF1A73E9); }
+ return null;
+ }),
+ trackColor: MaterialStateProperty.resolveWith<Color?>((Set<MaterialState> states) {
+ if (states.contains(MaterialState.disabled)) { return null; }
+ if (states.contains(MaterialState.selected)) { return const Color(0xFF1A73E9); }
+ return null;
+ }),
+ ),
 );
 
 const lightClimaTheme = ClimaThemeData(

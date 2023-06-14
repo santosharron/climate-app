@@ -9,7 +9,7 @@ class CreditsDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textSpanStyle = TextStyle(
-      color: Theme.of(context).textTheme.subtitle1!.color,
+      color: Theme.of(context).textTheme.titleMedium!.color,
     );
     return SimpleDialog(
       contentPadding: const EdgeInsets.all(24),
@@ -58,7 +58,7 @@ class CreditsDialog extends StatelessWidget {
             ),
             Divider(
               color:
-                  Theme.of(context).textTheme.subtitle1!.color!.withAlpha(65),
+                  Theme.of(context).textTheme.titleMedium!.color!.withAlpha(65),
             ),
             RichText(
               text: TextSpan(
@@ -97,7 +97,7 @@ class CreditsDialog extends StatelessWidget {
             ),
             Divider(
               color:
-                  Theme.of(context).textTheme.subtitle1!.color!.withAlpha(65),
+                  Theme.of(context).textTheme.titleMedium!.color!.withAlpha(65),
             ),
             RichText(
               text: TextSpan(

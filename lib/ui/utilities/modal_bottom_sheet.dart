@@ -47,7 +47,7 @@ Future<void> showGeneralSheet(
             ),
           ),
           Divider(
-            color: Theme.of(context).textTheme.subtitle1!.color!.withAlpha(65),
+            color: Theme.of(context).textTheme.titleMedium!.color!.withAlpha(65),
           ),
           Flexible(
             child: SingleChildScrollView(child: child),

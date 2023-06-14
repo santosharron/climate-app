@@ -9,6 +9,8 @@ class DarkThemeDialog extends ConsumerWidget {
     'Black': DarkThemeModel.black,
   };
 
+  const DarkThemeDialog({super.key});
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final themeStateNotifier = ref.watch(themeStateNotifierProvider.notifier);
@@ -22,7 +24,7 @@ class DarkThemeDialog extends ConsumerWidget {
           title: Text(
             entry.key,
             style: TextStyle(
-              color: Theme.of(context).textTheme.subtitle1!.color,
+              color: Theme.of(context).textTheme.titleMedium!.color,
             ),
           ),
           value: entry.value,
@@ -38,7 +40,7 @@ class DarkThemeDialog extends ConsumerWidget {
       title: Text(
         'Dark theme',
         style: TextStyle(
-          color: Theme.of(context).textTheme.subtitle1!.color,
+          color: Theme.of(context).textTheme.titleMedium!.color,
         ),
       ),
       children: [

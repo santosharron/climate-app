@@ -60,7 +60,7 @@ class DailyForecastsWidget extends ConsumerWidget {
                       ),
                       Icon(
                         FontAwesomeIcons.droplet,
-                        color: Theme.of(context).textTheme.subtitle2!.color,
+                        color: Theme.of(context).textTheme.titleSmall!.color,
                         size: kIconSize(context),
                       ),
                       Text(

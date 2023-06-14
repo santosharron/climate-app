@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SettingsTile extends StatelessWidget {
-  const SettingsTile({
+  const SettingsTile({super.key, 
     required this.title,
     this.padding,
     this.subtitle,
@@ -25,14 +25,14 @@ class SettingsTile extends StatelessWidget {
         title: Text(
           title,
           style: TextStyle(
-            color: Theme.of(context).textTheme.subtitle1!.color,
+            color: Theme.of(context).textTheme.titleMedium!.color,
           ),
         ),
         subtitle: subtitle != null
             ? Text(
                 subtitle!,
                 style: TextStyle(
-                  color: Theme.of(context).textTheme.subtitle2!.color,
+                  color: Theme.of(context).textTheme.titleSmall!.color,
                 ),
               )
             : null,

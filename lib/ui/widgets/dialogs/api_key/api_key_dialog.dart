@@ -66,7 +66,7 @@ class ApiKeyDialog extends HookConsumerWidget {
           focusColor: Theme.of(context).colorScheme.secondary,
           hintText: 'Enter API key',
           hintStyle: TextStyle(
-            color: Theme.of(context).textTheme.subtitle2!.color,
+            color: Theme.of(context).textTheme.titleSmall!.color,
           ),
           errorText: () {
             if (failure.value is InvalidApiKey) {

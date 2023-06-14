@@ -125,7 +125,7 @@ class WeatherScreen extends HookConsumerWidget {
                   Text(
                     'Updated ${DateFormat.Md().add_jm().format(fullWeather.currentWeather.date.toLocal())} · ',
                     style: TextStyle(
-                      color: Theme.of(context).textTheme.subtitle2!.color,
+                      color: Theme.of(context).textTheme.titleSmall!.color,
                       fontSize: MediaQuery.of(context).size.shortestSide <
                               kTabletBreakpoint
                           ? 11.sp
@@ -146,7 +146,7 @@ class WeatherScreen extends HookConsumerWidget {
                       }
                     }(),
                     style: TextStyle(
-                      color: Theme.of(context).textTheme.subtitle1!.color,
+                      color: Theme.of(context).textTheme.titleMedium!.color,
                       fontSize: MediaQuery.of(context).size.shortestSide <
                               kTabletBreakpoint
                           ? 11.sp
@@ -186,7 +186,7 @@ class WeatherScreen extends HookConsumerWidget {
           child: RefreshIndicator(
             key: refreshIndicatorKey,
             onRefresh: fullWeatherStateNotifier.loadFullWeather,
-            color: Theme.of(context).textTheme.subtitle1!.color,
+            color: Theme.of(context).textTheme.titleMedium!.color,
             child: Padding(
               padding: EdgeInsets.symmetric(
                 horizontal: () {
@@ -222,7 +222,7 @@ class WeatherScreen extends HookConsumerWidget {
                                 Divider(
                                   color: Theme.of(context)
                                       .textTheme
-                                      .subtitle1!
+                                      .titleMedium!
                                       .color!
                                       .withAlpha(65),
                                 ),
@@ -237,7 +237,7 @@ class WeatherScreen extends HookConsumerWidget {
                                 Divider(
                                   color: Theme.of(context)
                                       .textTheme
-                                      .subtitle1!
+                                      .titleMedium!
                                       .color!
                                       .withAlpha(65),
                                 ),
@@ -245,7 +245,7 @@ class WeatherScreen extends HookConsumerWidget {
                                 Divider(
                                   color: Theme.of(context)
                                       .textTheme
-                                      .subtitle1!
+                                      .titleMedium!
                                       .color!
                                       .withAlpha(65),
                                 ),

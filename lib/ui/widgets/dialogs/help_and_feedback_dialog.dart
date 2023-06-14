@@ -11,7 +11,7 @@ class HelpAndFeedbackDialog extends StatelessWidget {
         title: Text(
           'Help & Feedback',
           style: TextStyle(
-            color: Theme.of(context).textTheme.subtitle1!.color,
+            color: Theme.of(context).textTheme.titleMedium!.color,
           ),
         ),
         children: [

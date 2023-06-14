@@ -12,7 +12,7 @@ class ApiKeyResetDialog extends ConsumerWidget {
         title: Text(
           'Reset API Key?',
           style: TextStyle(
-            color: Theme.of(context).textTheme.subtitle1!.color,
+            color: Theme.of(context).textTheme.titleMedium!.color,
           ),
         ),
         actions: [

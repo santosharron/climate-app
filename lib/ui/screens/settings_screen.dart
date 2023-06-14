@@ -19,6 +19,8 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class SettingScreen extends ConsumerWidget {
+  const SettingScreen({super.key});
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final theme =
@@ -46,7 +48,7 @@ class SettingScreen extends ConsumerWidget {
           'Settings',
           style: TextStyle(
             color: Theme.of(context).appBarTheme.titleTextStyle!.color,
-            fontSize: Theme.of(context).textTheme.headline6!.fontSize,
+            fontSize: Theme.of(context).textTheme.titleLarge!.fontSize,
           ),
         ),
       ),
@@ -74,7 +76,7 @@ class SettingScreen extends ConsumerWidget {
               ),
               onTap: () => showDialog<void>(
                 context: context,
-                builder: (context) => UnitSystemDialog(),
+                builder: (context) => const UnitSystemDialog(),
               ),
             ),
             const SettingsDivider(),
@@ -101,7 +103,7 @@ class SettingScreen extends ConsumerWidget {
               padding: 80.0,
               onTap: () => showDialog<void>(
                 context: context,
-                builder: (context) => ThemeDialog(),
+                builder: (context) => const ThemeDialog(),
               ),
             ),
             SettingsTile(
@@ -121,7 +123,7 @@ class SettingScreen extends ConsumerWidget {
               padding: 80.0,
               onTap: () => showDialog<void>(
                 context: context,
-                builder: (context) => DarkThemeDialog(),
+                builder: (context) => const DarkThemeDialog(),
               ),
             ),
             const SettingsDivider(),
@@ -181,7 +183,7 @@ class SettingScreen extends ConsumerWidget {
               onTap: () => Navigator.push(
                 context,
                 MaterialPageRoute<void>(
-                  builder: (context) => AboutScreen(),
+                  builder: (context) => const AboutScreen(),
                 ),
               ),
             ),

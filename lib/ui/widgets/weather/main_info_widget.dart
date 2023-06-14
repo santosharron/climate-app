@@ -78,7 +78,7 @@ class MainInfoWidget extends ConsumerWidget {
                 Icon(
                   Icons.keyboard_arrow_up,
                   size: kIconSize(context),
-                  color: Theme.of(context).textTheme.subtitle1!.color,
+                  color: Theme.of(context).textTheme.titleMedium!.color,
                 ),
                 Text(
                   '${currentDayForecast.maxTemperature.round()}°',
@@ -89,7 +89,7 @@ class MainInfoWidget extends ConsumerWidget {
                   child: Icon(
                     Icons.keyboard_arrow_down,
                     size: kIconSize(context),
-                    color: Theme.of(context).textTheme.subtitle1!.color,
+                    color: Theme.of(context).textTheme.titleMedium!.color,
                   ),
                 ),
                 Text(

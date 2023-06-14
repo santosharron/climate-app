@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SettingsHeader extends StatelessWidget {
-  const SettingsHeader({required this.title});
+  const SettingsHeader({super.key, required this.title});
   final String title;
 
   @override
@@ -13,7 +13,7 @@ class SettingsHeader extends StatelessWidget {
           alignment: Alignment.centerLeft,
           child: Text(
             title,
-            style: Theme.of(context).textTheme.bodyText1!.copyWith(
+            style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                   color: Theme.of(context).colorScheme.secondary,
                 ),
           ),

@@ -10,7 +10,6 @@ final blackTheme = ThemeData.dark().copyWith(
   iconTheme: const IconThemeData(color: Color(0xFF9BA0A6)),
   popupMenuTheme: const PopupMenuThemeData(color: Color(0xFF202125)),
   dialogBackgroundColor: const Color(0xFF202125),
-  toggleableActiveColor: const Color(0xFF89B4F8),
   colorScheme: ColorScheme.fromSwatch(accentColor: const Color(0xFF89B4F8)),
   primaryColor: const Color(0xFF000000),
   scaffoldBackgroundColor: const Color(0xFF000000),
@@ -20,8 +19,8 @@ final blackTheme = ThemeData.dark().copyWith(
     contentTextStyle: TextStyle(color: Color(0xFFE9EAEE)),
   ),
   textTheme: const TextTheme(
-    subtitle1: TextStyle(color: Color(0xFFE9EAEE)),
-    subtitle2: TextStyle(color: Color(0xFF9BA0A6)),
+    titleMedium: TextStyle(color: Color(0xFFE9EAEE)),
+    titleSmall: TextStyle(color: Color(0xFF9BA0A6)),
   ),
   bannerTheme: const MaterialBannerThemeData(
     backgroundColor: Color(0xFF000000),
@@ -42,7 +41,30 @@ final blackTheme = ThemeData.dark().copyWith(
       systemNavigationBarColor: Color(0xFF000000),
       statusBarColor: Color(0xFF000000),
     ),
-  ),
+  ), checkboxTheme: CheckboxThemeData(
+ fillColor: MaterialStateProperty.resolveWith<Color?>((Set<MaterialState> states) {
+ if (states.contains(MaterialState.disabled)) { return null; }
+ if (states.contains(MaterialState.selected)) { return const Color(0xFF89B4F8); }
+ return null;
+ }),
+ ), radioTheme: RadioThemeData(
+ fillColor: MaterialStateProperty.resolveWith<Color?>((Set<MaterialState> states) {
+ if (states.contains(MaterialState.disabled)) { return null; }
+ if (states.contains(MaterialState.selected)) { return const Color(0xFF89B4F8); }
+ return null;
+ }),
+ ), switchTheme: SwitchThemeData(
+ thumbColor: MaterialStateProperty.resolveWith<Color?>((Set<MaterialState> states) {
+ if (states.contains(MaterialState.disabled)) { return null; }
+ if (states.contains(MaterialState.selected)) { return const Color(0xFF89B4F8); }
+ return null;
+ }),
+ trackColor: MaterialStateProperty.resolveWith<Color?>((Set<MaterialState> states) {
+ if (states.contains(MaterialState.disabled)) { return null; }
+ if (states.contains(MaterialState.selected)) { return const Color(0xFF89B4F8); }
+ return null;
+ }),
+ ),
 );
 
 const blackClimaTheme = ClimaThemeData(

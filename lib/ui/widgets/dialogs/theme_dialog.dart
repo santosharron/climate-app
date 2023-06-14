@@ -10,6 +10,8 @@ class ThemeDialog extends ConsumerWidget {
     'System default': ThemeModel.systemDefault,
   };
 
+  const ThemeDialog({super.key});
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final themeStateNotifier = ref.watch(themeStateNotifierProvider.notifier);
@@ -22,7 +24,7 @@ class ThemeDialog extends ConsumerWidget {
           title: Text(
             entry.key,
             style: TextStyle(
-              color: Theme.of(context).textTheme.subtitle1!.color,
+              color: Theme.of(context).textTheme.titleMedium!.color,
             ),
           ),
           value: entry.value,
@@ -38,7 +40,7 @@ class ThemeDialog extends ConsumerWidget {
       title: Text(
         'Theme',
         style: TextStyle(
-          color: Theme.of(context).textTheme.subtitle1!.color,
+          color: Theme.of(context).textTheme.titleMedium!.color,
         ),
       ),
       children: [
